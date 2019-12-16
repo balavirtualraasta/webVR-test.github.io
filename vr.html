@@ -55,6 +55,12 @@
   </head>
   <body>
     <a-scene>
+  <a-assets>
+    <img id="homeThumbnail" src="button.png">
+  </a-assets>
+
+  <a-entity link="href: vr2.html; title: My Homepage; image: #homeThumbnail"></a-entity>
+	    
 	    <a-entity id="spots" hotspots>
         <a-entity id="group-point1">
           <a-image src="button.png" position="0 2 -2"></a-image>
@@ -63,6 +69,7 @@
 	<div class="spacer-tiny"></div>
 		<a-link href="vr2.html"><img src="button.png"> </a-link>
 	</div>
+		
 		
         </a-entity>
         <a-entity id="group-point2" scale="0 0 0">
@@ -81,7 +88,7 @@
 
       <a-sky src="Scene1.png" rotation="0 -130 0"></a-sky>
 
-      <a-text font="kelsonsans" value="testing 9" width="4" position="-2.5 2 -2"
+      <a-text font="kelsonsans" value="testing 10" width="4" position="-2.5 2 -2"
               rotation="0 15 0"></a-text>
 	    
 	    <a-entity id="cam" camera position="0 1.6 0" look-controls>
