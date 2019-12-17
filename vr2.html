@@ -11,27 +11,18 @@
     <a-scene>
       <a-sky src="Scene2.png" rotation="0 -130 0"></a-sky>
 
-      <a-text font="kelsonsans" value="testing 9" width="5" position="0 1 0"
+      <a-text font="kelsonsans" value="first floor" width="5" position="0 2 0"
               rotation="0 15 0"></a-text>
     <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
 	   
 	    <a-link href="vr3.html"><a-image src="button.png" width="0.5" height="0.5" position="0 1 -2"></a-image></a-link>
-<!--     <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
-             event-set__enter="_event: mouseenter; color: #026fc9"
-             event-set__leave="_event: mouseleave; color: #4CC3D9">
-        <!-- This animation begins when the box is clicked with the mouse. -->
-<!--         <a-animation attribute="rotation"
-               dur="3000"
-               fill="forwards"
-               to="0 360 0"
-               direction="alternate"
-               begin="click"></a-animation>
-     </a-box> --> -->
-	    
-<!--      <a-link href="vr1.html"><a-image src="button.png" width="0.5" height="0.5" position="0 1 -2"></a-image></a-link> -->
-<!-- 	    <a-link href="vr1.html" title="My Homepage" image="button.png"></a-link> -->
-
-
+	    <a-entity id="cam" camera position="0 1.6 0" look-controls>
+        <a-entity cursor="fuse:false;fuseTimeout:2000"
+                  geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                  position="0 0 -1.8"
+                  material="shader:flat;color:#ff0000"
+                  animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
+        </a-entity>
 		
     </a-scene>
   </body>
