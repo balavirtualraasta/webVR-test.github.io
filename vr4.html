@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky src="4th_floor.jpg" rotation="0 -130 0"></a-sky>
+
+      <a-text font="kelsonsans" value="first floor" width="5" position="0 2 0"
+              rotation="0 15 0"></a-text>
+    <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+	   
+	    <a-link href="vr5.html"><a-image src="button.png" width="0.3" height="0.3" position="0 1 -2"></a-image></a-link>
+	    <a-entity id="cam" camera position="0 1.6 0" look-controls>
+        <a-entity cursor="fuse:false;fuseTimeout:2000"
+                  geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                  position="0 0 -1.8"
+                  material="shader:flat;color:#ff0000"
+                  animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1">
+        </a-entity>
+		
+    </a-scene>
+  </body>
+</html>
