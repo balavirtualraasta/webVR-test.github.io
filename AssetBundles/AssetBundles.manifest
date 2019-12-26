@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2128224776
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: chair
+      Dependencies: {}
